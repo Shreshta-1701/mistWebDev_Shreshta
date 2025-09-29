@@ -86,7 +86,8 @@ h2 {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
-    background-image: url(extras/1350764.jpeg);
+    background-color: transparent;
+    background-image: url(extras/1350764-modified.png);
     background-position: center;
     background-size: cover;
 
@@ -208,4 +209,5 @@ footer {
         transform: translateY(0);
         opacity: 1;
     }
+
 }
