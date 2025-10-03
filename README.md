@@ -52,7 +52,7 @@ The project includes:
 ## Credits
 
 * Background Video CSS learnt from [youtube](https://www.youtube.com/watch?v=-unASUgYtVI&t=9s).
-  Same logic was used again except using Tailwind Classes.
+  Same logic was used again, only this time using Tailwind Classes.
 * Tailwind CSS Utility Classes learnt from [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 * Used [Play Tailwind](https://play.tailwindcss.com/) for practicing Tailwind commands.
 * Planet images and information: **Outer Wilds Wiki**
