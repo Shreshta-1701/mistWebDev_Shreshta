@@ -1,12 +1,12 @@
 # Outer Wilds Ventures
 
-Project for **MIST Web Dev Bootcamp Week 1** focused on learning the basics of HTML and CSS.
+Project for **MIST Web Dev Bootcamp Week 2** focused on learning Tailwind CSS.
 
 ---
 
 ## About
 
-This website is a simple showcase of HTML and CSS, that acts as a sort of advertisement website for the game "Outer Wilds". It showcases the planets in the game's solar system and a synopsis of the game as well.
+This website is a simple showcase of Tailwind CSS and its capabilities, that acts as a sort of advertisement website for the game "Outer Wilds". It showcases the planets in the game's solar system and a synopsis of the game as well.
 
 The project includes:
 
@@ -20,16 +20,16 @@ The project includes:
 ## What I Learned
 
 * Creating the skeleton of a web page using HTML
-* Styling the web page to my liking using CSS.
-* Using flexbox, and grids to maintain the responsiveness of the website while using multiple block elements.
-* Adding a simple smooth scroll animation for the planet cards using CSS.
-* Handling images within multiple div tags using CSS properties.
+* Styling the web page to my liking using utility classes from Tailwind CSS.
+* Using flexbox, and grids within Tailwind to maintain responsiveness across layouts.
+* Handling images within multiple div tags using Tailwind CSS.
+* Creating animations and a material UI inspired design for the planet cards and synopsis section using Tailwind's inbuilt utility classes.
 
 ---
 
 ## Technologies
 
-* HTML, CSS
+* HTML, Tailwind CSS
 * Google Fonts (Poppins)
 
 ---
@@ -38,7 +38,7 @@ The project includes:
 
 ```
 ├── index.html    # Main Webpage
-├── styles.css    # CSS Stylesheet
+├── styles.css    # CSS Stylesheet (Only for importing tailwind)
 └── extras/       # Planets and Background Images and Videos, Footer Logo.
 ```
 
@@ -51,8 +51,10 @@ The project includes:
 
 ## Credits
 
-* Background Video CSS learnt from [youtube](https://www.youtube.com/watch?v=-unASUgYtVI&t=9s)
-* Smooth Scrolling Animation CSS learnt from [youtube](https://www.youtube.com/watch?v=16PncZlSNds)
+* Background Video CSS learnt from [youtube](https://www.youtube.com/watch?v=-unASUgYtVI&t=9s).
+  Same logic was used again except using Tailwind Classes.
+* Tailwind CSS Utility Classes learnt from [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+* Used [Play Tailwind](https://play.tailwindcss.com/) for practicing Tailwind commands.
 * Planet images and information: **Outer Wilds Wiki**
 * **GPT-5 by OpenAI**: Helped in writing this README
 
