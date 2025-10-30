@@ -1,150 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outer Wilds</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
 </head>
 
-<body class="bg-black min-h-screen flex flex-col">
-    <div class="relative w-full h-screen flex items-center justify-center overflow-hidden">
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="extras/OuterWildsClip.mp4" type="video/mp4">
-            <img src="extras/1350764-modified.png" alt="Background" class="w-full h-full object-cover" />
-        </video>
-        <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-indigo-900/60 to-black/80"></div>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-white text-4xl md:text-6xl font-bold mb-8 drop-shadow-lg">
-                The Universe Is A Beautiful Place<br>
-                And You Are No Longer Afraid To Die
-            </h1>
-            <a href="https://www.mobiusdigitalgames.com/outer-wilds.html"
-                class="inline-block text-white border-2 border-white px-8 py-4 text-xl rounded-full transition hover:bg-white hover:text-black shadow-lg">
-                Join The Outer Wilds Ventures
-            </a>
-        </div>
-    </div>
+<body>
+    <main class="app">
+        <header class="title">Calculator</header>
+        <section class="calculator" aria-label="Calculator">
+            <div class="display" id="display" aria-live="polite">0</div>
+            <div class="buttons" role="group" aria-label="Calculator buttons">
+                <div class="row controls">
+                    <button class="btn control" data-action="clear">C</button>
+                    <button class="btn control" data-action="delete">DEL</button>
+                    <button class="btn control" data-value="(">(</button>
+                    <button class="btn control" data-value=")">)</button>
+                </div>
 
-    <div class="flex flex-col lg:flex-row justify-evenly items-start bg-cover bg-center py-10 px-4 gap-8"
-        style="background-image: url('extras/1350764-modified.png');">
+                <div class="row">
+                    <div class="left">
+                        <button class="btn num" data-value="7">7</button>
+                        <button class="btn num" data-value="8">8</button>
+                        <button class="btn num" data-value="9">9</button>
+                    </div>
+                    <div class="right">
+                        <button class="btn operator" data-value="÷">÷</button>
+                    </div>
+                </div>
 
-        <div
-            class="w-full lg:w-1/2 rounded-xl p-8 mb-8 lg:mb-0 shadow-xl border-l-8 border-indigo-500 bg-gray-900 bg-opacity-95">
-            <h2 class="text-4xl font-bold text-indigo-300 mb-6">Explore The Solar System</h2>
-            <p class="text-gray-100 text-lg mb-6 text-justify">
-                <span class="font-semibold text-indigo-400">Outer Wilds</span> is an open world mystery about a solar
-                system trapped in an endless time loop. As a new
-                recruit of the Outer Wilds Ventures, you set out to explore your home planet, Timber Hearth, and the
-                rest of the solar system. But be careful: the time loop resets every 22 minutes, and if you die, you
-                wake up back at the start of the loop with no memory of what happened before. Can you uncover the
-                secrets of the ancient Nomai civilization and save the solar system from destruction?
-            </p>
-            <p class="text-gray-100 text-lg text-justify leading-relaxed">
-                <span class="font-semibold text-indigo-400">The Planets</span> in Outer Wilds all pose different
-                challenges and mysteries. Every celestial body is vital
-                to understanding the plot of the game, and exploring each and every one of them is the real magic behind
-                the game.<br>
-                <span class="text-indigo-300 font-semibold">You can only ever learn to traverse the Tornadoes on Giant's
-                    Deep once.</span><br>
-                <span class="text-indigo-300 font-semibold">You can only ever learn how to avoid the Anglerfish
-                    once.</span><br>
-                <span class="text-indigo-300 font-semibold">You can only ever learn how to solve every puzzle,
-                    once.</span><br>
-                <span class="text-indigo-300 font-semibold">And you can only ever experience this game, once.</span>
-            </p>
-        </div>
-        <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="flex flex-col items-center">
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-6 text-center shadow-lg transition transform hover:scale-105 hover:shadow-cyan-400/70 duration-300 group">
-                    <a href="https://outerwilds.fandom.com/wiki/Timber_Hearth">
-                        <img src="extras/Timberhearth_1.webp" alt="Timber Hearth"
-                            class="w-40 h-40 rounded-full object-cover mb-4 shadow-md border-4 border-black group-hover:border-cyan-400 transition duration-300" />
-                    </a>
+                <div class="row">
+                    <div class="left">
+                        <button class="btn num" data-value="4">4</button>
+                        <button class="btn num" data-value="5">5</button>
+                        <button class="btn num" data-value="6">6</button>
+                    </div>
+                    <div class="right">
+                        <button class="btn operator" data-value="×">×</button>
+                    </div>
                 </div>
-                <div class="bg-black bg-opacity-80 px-6 py-3 rounded-lg shadow-lg mt-4">
-                    <span class="text-white text-lg font-semibold tracking-wide">Timber Hearth</span>
-                </div>
-            </div>
-            <div class="flex flex-col items-center">
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-6 text-center shadow-lg transition transform hover:scale-105 hover:shadow-cyan-400/70 duration-300 group">
-                    <a href="https://outerwilds.fandom.com/wiki/Hourglass_Twins">
-                        <img src="extras/Hourglass_twins.webp" alt="Hourglass Twins"
-                            class="w-40 h-40 rounded-full object-cover mb-4 shadow-md border-4 border-black group-hover:border-cyan-400 transition duration-300" />
-                    </a>
-                </div>
-                <div class="bg-black bg-opacity-80 px-6 py-3 rounded-lg shadow-lg mt-4">
-                    <span class="text-white text-lg font-semibold tracking-wide">The Twins</span>
-                </div>
-            </div>
-            <div class="flex flex-col items-center">
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-6 text-center shadow-lg transition transform hover:scale-105 hover:shadow-cyan-400/70 duration-300 group">
-                    <a href="https://outerwilds.fandom.com/wiki/Brittle_Hollow">
-                        <img src="extras/Brittle_Hollow_BH.webp" alt="Brittle Hollow"
-                            class="w-40 h-40 rounded-full object-cover mb-4 shadow-md border-4 border-black group-hover:border-cyan-400 transition duration-300" />
-                    </a>
-                </div>
-                <div class="bg-black bg-opacity-80 px-6 py-3 rounded-lg shadow-lg mt-4">
-                    <span class="text-white text-lg font-semibold tracking-wide">Brittle Hollow</span>
-                </div>
-            </div>
-            <div class="flex flex-col items-center">
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-6 text-center shadow-lg transition transform hover:scale-105 hover:shadow-cyan-400/70 duration-300 group">
-                    <a href="https://outerwilds.fandom.com/wiki/Dark_Bramble">
-                        <img src="extras/Dark_Bramble.webp" alt="Dark Bramble"
-                            class="w-40 h-40 rounded-full object-cover mb-4 shadow-md border-4 border-black group-hover:border-cyan-400 transition duration-300" />
-                    </a>
-                </div>
-                <div class="bg-black bg-opacity-80 px-6 py-3 rounded-lg shadow-lg mt-4">
-                    <span class="text-white text-lg font-semibold tracking-wide">Dark Bramble</span>
-                </div>
-            </div>
-            <div class="flex flex-col items-center">
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-6 text-center shadow-lg transition transform hover:scale-105 hover:shadow-cyan-400/70 duration-300 group">
-                    <a href="https://outerwilds.fandom.com/wiki/Giant%27s_Deep">
-                        <img src="extras/1_7d6rmjrjk6NaS6Gca4a7mw.webp" alt="Giant's Deep"
-                            class="w-40 h-40 rounded-full object-cover mb-4 shadow-md border-4 border-black group-hover:border-cyan-400 transition duration-300" />
-                    </a>
-                </div>
-                <div class="bg-black bg-opacity-80 px-6 py-3 rounded-lg shadow-lg mt-4">
-                    <span class="text-white text-lg font-semibold tracking-wide">Giant's Deep</span>
-                </div>
-            </div>
-            <div class="flex flex-col items-center">
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-6 text-center shadow-lg transition transform hover:scale-105 hover:shadow-cyan-400/70 duration-300 group">
-                    <a href="https://outerwilds.fandom.com/wiki/Interloper">
-                        <img src="extras/The_Interloper.webp" alt="The Interloper"
-                            class="w-40 h-40 rounded-full object-cover mb-4 shadow-md border-4 border-black group-hover:border-cyan-400 transition duration-300" />
-                    </a>
-                </div>
-                <div class="bg-black bg-opacity-80 px-6 py-3 rounded-lg shadow-lg mt-4">
-                    <span class="text-white text-lg font-semibold tracking-wide">The Interloper</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <footer class="bg-black h-40 flex flex-col md:flex-row items-center justify-between px-8 mt-10">
-        <img src="extras/5u2rsts7ng981.png" alt="Outer Wilds Logo" class="h-32 w-64 object-contain mb-4 md:mb-0" />
-        <div class="text-white text-center">
-            Shreshta Jaiswal - Mist Web Development Bootcamp - Week 1 Project - Outer Wilds Ventures
-        </div>
-    </footer>
+                <div class="row">
+                    <div class="left">
+                        <button class="btn num" data-value="1">1</button>
+                        <button class="btn num" data-value="2">2</button>
+                        <button class="btn num" data-value="3">3</button>
+                    </div>
+                    <div class="right">
+                        <button class="btn operator" data-value="-">-</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="left">
+                        <button class="btn num wide" data-value="0">0</button>
+                        <button class="btn num" data-value=".">.</button>
+                    </div>
+                    <div class="right">
+                        <button class="btn operator" data-value="+">+</button>
+                    </div>
+                </div>
+                <div class="row equals-row">
+                    <button class="btn equals" data-action="equals">=</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
-
