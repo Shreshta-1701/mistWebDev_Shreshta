@@ -1,36 +1,33 @@
-# Outer Wilds Ventures
+# Calculator
 
-Project for **MIST Web Dev Bootcamp Week 2** focused on learning Tailwind CSS.
+Project for **MIST Web Dev Bootcamp Week 3** focused on learning the basics of Javascript.
 
 ---
 
 ## About
 
-This website is a simple showcase of Tailwind CSS and its capabilities, that acts as a sort of advertisement website for the game "Outer Wilds". It showcases the planets in the game's solar system and a synopsis of the game as well.
+This website is a simple showcase of Javascript and its capabilities, in the form of a basic calculator.
 
 The project includes:
 
-* A Section with a background video and a link to the game's website.
-* A Section for showcasing the different planets in the game's solar system, all acting as links to the Outer Wilds Wiki, for more information.
-* A Synopsis of the game to the side of the planet cards.
-* A footer with author credit.
+* A gradient background with a calculator in the center, with all buttons styled using css, a major part of the design choice being dark gradients.
+* A js script to ensure the intended working of the calculator.
+* A display section within the calculator that constantly updates with each operation and input.
 
 ---
 
 ## What I Learned
 
-* Creating the skeleton of a web page using HTML
-* Styling the web page to my liking using utility classes from Tailwind CSS.
-* Using flexbox, and grids within Tailwind to maintain responsiveness across layouts.
-* Handling images within multiple div tags using Tailwind CSS.
-* Creating animations and a material UI inspired design for the planet cards and synopsis section using Tailwind's inbuilt utility classes.
+* Creating the skeleton of a web page using HTML.
+* Styling the calculator and its buttons to my liking using CSS.
+* Using grids and operating on specifc rows and columns to maintain the calculator layout.
+* Writing javascript code to perform calculations without using functions such as eval().
 
 ---
 
 ## Technologies
 
-* HTML, Tailwind CSS
-* Google Fonts (Poppins)
+* HTML, CSS, JS
 
 ---
 
@@ -38,25 +35,14 @@ The project includes:
 
 ```
 ├── index.html    # Main Webpage
-├── styles.css    # CSS Stylesheet (Only for importing tailwind)
-└── extras/       # Planets and Background Images and Videos, Footer Logo.
+├── styles.css    # CSS Stylesheet
+└── script.js     # Javascript code for the working of the calculator
 ```
 
 ---
 
 ## Live Preview
-[To The Outer Wilds Solar System](https://shreshta-1701.github.io/mistWebDev_Shreshta/)
-
----
-
-## Credits
-
-* Background Video CSS learnt from [youtube](https://www.youtube.com/watch?v=-unASUgYtVI&t=9s).
-  Same logic was used again, only this time using Tailwind Classes.
-* Tailwind CSS Utility Classes learnt from [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-* Used [Play Tailwind](https://play.tailwindcss.com/) for practicing Tailwind commands.
-* Planet images and information: **Outer Wilds Wiki**
-* **GPT-5 by OpenAI**: Helped in writing this README
+Here's My Calculator(https://shreshta-1701.github.io/mistWebDev_Shreshta/)
 
 ---
 
